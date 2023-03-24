@@ -1,5 +1,5 @@
 # Replication Package: Adopting Two Supervisors for Efficient Use of Large-Scale Remote Deep Neural Networks
-
+[![DOI](https://zenodo.org/badge/618428518.svg)](https://zenodo.org/badge/latestdoi/618428518)
 
 ## Installation
 
