@@ -1,0 +1,27 @@
+
+    \begin{table}
+    \newcommand{\verti}[1]{\begin{tabular}{@{}c@{}}\rotatebox[origin=c]{90}{\parbox{1cm}{\centering #1}}\end{tabular}}
+    \begin{tabular}{llcccccc}
+\toprule
+     &                & remote $\Delta$ &  $\Delta$ &  $\overline{obj}$ &  $S_{0.5}$ &  $S_1$ &  $S_2$ \\
+FPR & remote requests &              &            &          &          &         &         \\
+\midrule
+\multirow{4}{*}{\verti{0.01}} & 0.00 (baseline) &          n/a &       0.98 &     0.72 &     0.76 &    0.83 &    0.91 \\
+     & 0.30  &         0.94 &       0.98 &     0.80 &     0.83 &    0.88 &    0.94 \\
+     & 0.50  &         0.96 &       0.98 &     0.82 &     0.85 &    0.89 &    0.94 \\
+     & 0.70  &         0.97 &       0.98 &     0.83 &     0.86 &    0.90 &    0.95 \\
+\midrule \multirow{4}{*}{\verti{0.05}} & 0.00 (baseline) &          n/a &       0.91 &     0.74 &     0.77 &    0.82 &    0.87 \\
+     & 0.30  &         0.75 &       0.92 &     0.82 &     0.84 &    0.87 &    0.90 \\
+     & 0.50  &         0.84 &       0.92 &     0.84 &     0.86 &    0.88 &    0.90 \\
+     & 0.70  &         0.88 &       0.92 &     0.86 &     0.87 &    0.89 &    0.91 \\
+\midrule \multirow{4}{*}{\verti{0.10}} & 0.00 (baseline) &          n/a &       0.84 &     0.77 &     0.78 &    0.80 &    0.83 \\
+     & 0.30  &         0.55 &       0.86 &     0.82 &     0.83 &    0.84 &    0.86 \\
+     & 0.50  &         0.71 &       0.85 &     0.86 &     0.86 &    0.86 &    0.86 \\
+     & 0.70  &         0.79 &       0.85 &     0.88 &     0.87 &    0.87 &    0.86 \\
+\bottomrule
+\end{tabular}
+
+    \caption{System-Level Supervised Assessment for Issues}
+    \label{tab:rq2_res_Issues} 
+    \end{table}
+    

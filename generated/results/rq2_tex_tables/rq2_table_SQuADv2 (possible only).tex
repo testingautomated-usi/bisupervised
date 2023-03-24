@@ -1,0 +1,24 @@
+
+    \begin{table}
+    \newcommand{\verti}[1]{\begin{tabular}{@{}c@{}}\rotatebox[origin=c]{90}{\parbox{1cm}{\centering #1}}\end{tabular}}
+    \begin{tabular}{llcccccc}
+\toprule
+     &             & remote $\Delta$ &  $\Delta$ &  $\overline{obj}$ &  $S_{0.5}$ &  $S_1$ &  $S_2$ \\
+FPR & remote requests &              &            &          &          &         &         \\
+\midrule
+\multirow{3}{*}{\verti{0.01}} & 0.00 (baseline) &          n/a &       0.97 &     0.64 &     0.69 &    0.77 &    0.88 \\
+     & 0.33 (remote-even) &         0.94 &       0.98 &     0.70 &     0.74 &    0.82 &    0.91 \\
+     & 0.58 (best) &         0.96 &       0.98 &     0.73 &     0.77 &    0.84 &    0.92 \\
+\midrule \multirow{3}{*}{\verti{0.05}} & 0.00 (baseline) &          n/a &       0.90 &     0.67 &     0.70 &    0.77 &    0.84 \\
+     & 0.33 (remote-even) &         0.79 &       0.93 &     0.71 &     0.75 &    0.81 &    0.88 \\
+     & 0.58 (best) &         0.87 &       0.93 &     0.74 &     0.77 &    0.82 &    0.88 \\
+\midrule \multirow{3}{*}{\verti{0.10}} & 0.00 (baseline) &          n/a &       0.81 &     0.70 &     0.72 &    0.75 &    0.79 \\
+     & 0.33 (remote-even) &         0.62 &       0.87 &     0.72 &     0.74 &    0.79 &    0.84 \\
+     & 0.58 (best) &         0.78 &       0.87 &     0.75 &     0.77 &    0.80 &    0.84 \\
+\bottomrule
+\end{tabular}
+
+    \caption{System-Level Supervised Assessment for SQuADv2 (possible only)}
+    \label{tab:rq2_res_SQuADv2 (possible only)} 
+    \end{table}
+    

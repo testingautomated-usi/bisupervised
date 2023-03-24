@@ -1,0 +1,26 @@
+
+\begin{table}[ht]
+\footnotesize
+\centering
+\begin{tabular}{llllll}
+\toprule
+                         Case Study & \thead{Local\\Only} & \thead{Remote\\Only} & \thead{Break Even\\(*)} &                                         \thead{Eval Points\\(vs. Remote Only)} &                                                                                      Remarks \\
+\midrule
+                    \makecell{imdb} &               0.05s &                0.32s &      \makecell{85.68\%} &                        \makecell{55\%: 0.23s (-30.7\%)\\67\%: 0.26s (-18.5\%)} &                                                                   \vspace{5pt}\makecell[l]{} \\
+                  \makecell{Issues} &               0.09s &                1.08s &      \makecell{91.53\%} & \makecell{30\%: 0.41s (-61.5\%)\\50\%: 0.63s (-41.5\%)\\70\%: 0.84s (-21.5\%)} &                                     \vspace{5pt}\makecell[l]{Remote model emulated locally.} \\
+                \makecell{ImageNet} &               0.02s &                0.68s &      \makecell{96.35\%} & \makecell{30\%: 0.23s (-66.3\%)\\50\%: 0.36s (-46.3\%)\\70\%: 0.50s (-26.3\%)} & \vspace{5pt}\makecell[l]{Remote model emulated locally.\\Both models use batched inference.} \\
+\makecell{SQuADv2\\(possible only)} &               0.02s &                0.71s &      \makecell{97.42\%} &                        \makecell{33\%: 0.25s (-64.4\%)\\59\%: 0.44s (-38.1\%)} &                                                                   \vspace{5pt}\makecell[l]{} \\
+          \makecell{SQuADv2\\(all)} &               0.02s &                0.74s &      \makecell{97.53\%} &                        \makecell{49\%: 0.39s (-47.6\%)\\71\%: 0.55s (-25.9\%)} &                                                                               \makecell[l]{} \\
+\midrule
+
+\multicolumn{6}{l}{\makecell{(*) Break even point: the fraction of remote calls 
+at which the \architecture latency equals the latency\\ of the remote-only approach.
+For any 1st level supervisor threshold leading to fewer remote predictions,\\
+\architecture is faster than using the standalone remote model. Hence, higher is better.}}\\
+\bottomrule
+\end{tabular}
+
+
+\caption{Average Prediction and Supervision Latency per Input}
+\label{tab:times}
+\end{table}
