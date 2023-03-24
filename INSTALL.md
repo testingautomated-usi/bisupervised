@@ -17,7 +17,7 @@ docker pull ghcr.io/testingautomated-usi/bisupervised:latest
 You can build the docker image from source by navigating into the cloned replication package and running the following command:
 
 ```
-docker build . -t bisupervised
+docker build . -t ghcr.io/testingautomated-usi/bisupervised
 ```
 
 Note that building the image will take a couple of minutes and requires an active internet connection.
@@ -29,7 +29,7 @@ Note that building the image will take a couple of minutes and requires an activ
 Start the container with the following command (replacing `/path/to/assets/` with the path to the assets folder):
 
 ```
-docker run -it --rm -v /path/to/bisupervised/generated/:/generated bisupervised
+docker run -it --rm -v /path/to/bisupervised/generated/:/generated ghcr.io/testingautomated-usi/bisupervised
 ```
 
 You should now see a Tensorflow welcome message.
