@@ -1,22 +1,17 @@
 name: Docker Image CI
 
 on:
-  push:
-    branches: [ "main" ]
-
-env:
-  TIMESTAMP: $(date +%s)
+  release:
+    types: [published]
   
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . -t ghcr.io/testingautomated-usi/bisupervised:$TIMESTAMP
+      run: docker build . -t ghcr.io/testingautomated-usi/bisupervised:${{github.ref_name}}
       
     - name: Publish to github container repository
-      run: docker push ghcr.io/testingautomated-usi/bisupervised:$TIMESTAMP
+      run: docker push ghcr.io/testingautomated-usi/bisupervised:${{github.ref_name}}
