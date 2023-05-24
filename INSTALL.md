@@ -31,6 +31,7 @@ Start the container with the following command (replacing `/path/to/assets/` wit
 ```
 docker run -it --rm -v /path/to/bisupervised/generated/:/generated ghcr.io/testingautomated-usi/bisupervised
 ```
+> :information_source: The `-v /path/to/bisupervised/generated/:/generated` part of the command mounts the folder at your local (host) machine path `/path/to/bisupervised/generated/` to the folder `/generated` within the docker container, which allows the scripts to read its contents without copying them explicitely into the docker container, and to write to `/generated` without losing the outputs when destroying the container after its use.
 
 You should now see a Tensorflow welcome message.
 
